@@ -1,0 +1,19 @@
+{
+  "name": "ipfs-proxy",
+  "version": "1.0.0",
+  "description": "IPFS reverse proxy server",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "node src/test.js",
+    "start": "node src/server.js"
+  },
+  "author": "pmtoan",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.4",
+    "ipfs-http-client": "^45.0.0"
+  }
+}

@@ -1,0 +1,19 @@
+version: '3'
+services:
+  ipfs-node:
+    image: ipfs/go-ipfs
+    container_name: ipfs-node
+    restart: always
+    network_mode: host
+
+  ipfs-proxy:
+    image: ipfs-proxy
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ipfs-proxy
+    restart: always
+    environment:
+    - NODE_IP=127.0.0.1
+    - NODE_PORT=5001
+    network_mode: host
